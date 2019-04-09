@@ -200,6 +200,8 @@ static NSString *const TestNativeCustomTemplateID = @"10104090";
   } else {
     self.videoStatusLabel.text = @"Ad does not contain a video.";
   }
+  // Call record impression in order to trigger the video being displayed.
+  [nativeCustomTemplateAd recordImpression];
 }
 
 - (NSArray *)nativeCustomTemplateIDsForAdLoader:(GADAdLoader *)adLoader {
